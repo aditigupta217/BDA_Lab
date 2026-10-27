@@ -1,0 +1,54 @@
+column,description,source
+record_id,Unique identifier for the record,dataset
+city_zone,Named city zone / district the sensor sits in (6 distinct zones),dataset
+road_id,Identifier of the physical road segment,dataset
+intersection_id,Identifier of the monitored intersection (100 distinct intersections),dataset
+latitude,Latitude of the intersection,dataset
+longitude,Longitude of the intersection,dataset
+road_type,"Road classification: Local Street, Collector, Arterial, Highway",dataset
+lanes,Number of lanes on the road segment,dataset
+speed_limit,Posted speed limit (km/h),dataset
+vehicle_count,Total vehicles recorded in the hour-long window,dataset
+average_speed,Average vehicle speed recorded in the window (km/h),dataset
+heavy_vehicle_count,Count of heavy vehicles (trucks/buses) in the window,dataset
+motorcycle_count,Count of motorcycles in the window,dataset
+public_transport_count,Count of public transport vehicles in the window,dataset
+traffic_density,Vehicles per unit road length (relative density indicator),dataset
+queue_length,Observed queue length at the intersection (vehicles or meters),dataset
+average_wait_time,Average wait time at signal/intersection (minutes),dataset
+timestamp,Hourly timestamp of the observation (YYYY-MM-DD HH:MM:SS),dataset
+hour,Hour of day extracted from timestamp (0-23),dataset
+day_of_week,Day of week as integer,dataset
+is_weekend,1 if the observation falls on a weekend,dataset
+is_holiday,1 if the observation falls on a holiday,dataset
+rush_hour,1 if the observation falls in a defined rush-hour window,dataset
+peak_period,"Named period: Night, Off-Peak, Morning Peak, Midday, Evening Peak",dataset
+temperature,Ambient temperature (deg C),dataset
+rainfall_mm,Rainfall in millimetres during the window,dataset
+visibility_km,Visibility distance in kilometres,dataset
+air_quality_index,Air Quality Index reading,dataset
+weather_condition,"Clear, Rain, Heavy Rain, Fog",dataset
+nearby_school,1 if a school is near the intersection,dataset
+nearby_hospital,1 if a hospital is near the intersection,dataset
+nearby_market,1 if a market is near the intersection,dataset
+construction_activity,1 if construction activity was present,dataset
+road_condition,"Good, Wet, Poor",dataset
+parking_occupancy,Parking occupancy percentage near the intersection,dataset
+public_event,1 if a public event was occurring nearby,dataset
+accident_reported,1 if an accident was reported in the window,dataset
+traffic_camera_count,Number of traffic cameras covering the intersection,dataset
+iot_sensor_health,"Qualitative IoT sensor health status (e.g. Optimal, Good)",dataset
+signal_cycle_seconds,Full traffic signal cycle length in seconds,dataset
+green_light_duration,Green light duration within the signal cycle (seconds),dataset
+emergency_vehicle_detected,1 if an emergency vehicle was detected in the window,dataset
+traffic_flow_rate,Pre-computed traffic flow rate metric supplied in the dataset,dataset
+congestion_score,Pre-computed congestion score supplied in the dataset (higher = more congested),dataset
+emission_estimate,Estimated emissions for the window,dataset
+fuel_waste_estimate,Estimated fuel wasted due to congestion,dataset
+congestion_level,"Categorical label derived from congestion_score: Low, Moderate, High, Severe",dataset
+
+NOTE: No external documentation or license file accompanies this dataset in the
+workspace, so provenance and exact derivation formulas for traffic_flow_rate,
+congestion_score, emission_estimate and fuel_waste_estimate are not verifiable
+from the data alone. They are used here as supplied, and treated as proxy
+indicators rather than ground truth.
